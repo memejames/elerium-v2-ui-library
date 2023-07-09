@@ -10,18 +10,18 @@ local window = library:AddWindow("Name GUI", {
 	can_resize = false, -- true or false
 })
 ```
-create tab:
+AddTab:
 ```lua
 local features = window:AddTab("Features") -- Name of tab
 features:Show() -- shows the tab
 ```
-create button:
+AddButton:
 ```lua
 features:AddButton("name",function()
 	-- Code here
 end)
 ```
-create toggle:
+AddToggle:
 ```lua
 local switch = features:AddSwitch("name", function(bool)
 	 -- toggle_god_mode(bool)
@@ -45,7 +45,21 @@ end, {
 })
 slider:Set(16) -- Needed
 ```
-
+AddDropdown:
+```lua
+local dropdown = features:AddDropdown("select", function(text)
+	if text == "Mars" then  -- Code
+		print("o")
+	elseif text == "Earth" then
+	print("k")
+	elseif text == "Iridocyclitis" then
+	print("Weeeee")
+	end
+end)
+local mars = dropdown:Add("Mars")  -- Options 
+local earth = dropdown:Add("Earth")
+local not_a_planet = dropdown:Add("Iridocyclitis")
+```
 
 Credit to Singularity#5490 for creating the lib
 Soon adding more features to readme by myself.
