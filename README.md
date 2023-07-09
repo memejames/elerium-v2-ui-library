@@ -10,8 +10,8 @@ local window = library:AddWindow("Name GUI", {
 ```
 create tab
 ```lua
-local features = window:AddTab("Features")
-features:Show()
+local features = window:AddTab("Features") -- Name of tab
+features:Show() -- shows the tab
 ```
 create button
 ```lua
