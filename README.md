@@ -76,7 +76,7 @@ features:AddConsole({
 ```
 
 AddFolder:
-```
+```lua
 -- add folder for more space
 local folder = features:AddFolder()
 folder:AddSwitch()
