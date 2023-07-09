@@ -8,10 +8,21 @@ local window = library:AddWindow("Name GUI", {
 	can_resize = false, -- true or false
 })
 ```
-Make tab
+create tab
 ```lua
 local features = window:AddTab("Features")
 features:Show()
 ```
-
+create button
 ```lua
+features:AddButton("name",function()
+	-- Code here
+end)
+```
+create toggle
+```lua
+local switch = t:AddSwitch("God Mode", function(bool)
+	toggle_god_mode(bool)
+end)
+switch:Set(true)
+```
