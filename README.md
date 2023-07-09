@@ -1,4 +1,4 @@
-# Imgui Example
+# Imgui Example, Supports PC and Mobile!
 
 Please Copy and paste Library code into ur executor or text editor, Do not use Library code as loadstring as it may not work.
 
@@ -33,6 +33,17 @@ AddTextBox:
 features:AddTextBox("free click", function(text) -- u can add any text to "text"
 	game:GetService("ReplicatedStorage").Events.FreeGifts.Gift2:FireServer(text,"Clicks",false,false,"Normal")
 end)
+```lua
+AddSlider:  PC works on mobile not works sorry
+local slider = features:AddSlider("WalkSpeed", function(p)
+	setwalkspeed(p)
+end, {
+	["min"] = 16,
+	["max"] = 100,
+})
+slider:Set(16)
 ```
+
+
 Credit to Singularity#5490 for creating the lib
 Soon adding more features to readme by myself.
