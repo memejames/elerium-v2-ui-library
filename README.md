@@ -28,7 +28,7 @@ switch:Set(true)
 ```
 AddTextBox:
 ```lua
-features:AddTextBox("Teleport to Player", function(text)
+features:AddTextBox("free click", function(text)
 	game:GetService("ReplicatedStorage").Events.FreeGifts.Gift2:FireServer(text,"Click",false,false,"Normal")
 end)
 ```
