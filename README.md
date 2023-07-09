@@ -1,4 +1,4 @@
-# Imgui2
+# Imgui Example
 
 Create Window Here
 ```lua
