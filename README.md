@@ -10,6 +10,11 @@ local window = library:AddWindow("Name GUI", {
 	can_resize = false, -- true or false
 })
 ```
+AddLabel:
+```lua
+features:AddLabel("Hello World!")
+```
+
 AddTab:
 ```lua
 local features = window:AddTab("Features") -- Name of tab
@@ -59,6 +64,26 @@ end)
 local mars = dropdown:Add("Mars")  -- Options 
 local earth = dropdown:Add("Earth")
 local not_a_planet = dropdown:Add("Iridocyclitis")
+```
+AddConsole example:
+```lua
+-- Add console for ur Script/Gui
+features:AddConsole({ 
+	["y"] = 210,
+	["readonly"] = false,  
+	["source"] = "Lua",
+})
+```
+
+AddFolder:
+```
+-- add folder for more space
+local folder = features:AddFolder()
+folder:AddSwitch()
+folder:AddLabel("Woo! I'm inside a folder!")
+
+local folder2 = folder:AddFolder()
+folder2:AddLabel("I'm inside *two* folders :smirk:")
 ```
 
 Credit to Singularity#5490 for creating the lib
