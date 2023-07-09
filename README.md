@@ -33,8 +33,9 @@ AddTextBox:
 features:AddTextBox("free click", function(text) -- u can add any text to "text"
 	game:GetService("ReplicatedStorage").Events.FreeGifts.Gift2:FireServer(text,"Clicks",false,false,"Normal")
 end)
-```lua
+```
 AddSlider:  PC works on mobile not works sorry
+```lua
 local slider = features:AddSlider("WalkSpeed", function(p)
 	setwalkspeed(p)
 end, {
