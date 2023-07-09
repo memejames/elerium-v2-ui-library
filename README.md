@@ -34,3 +34,5 @@ features:AddTextBox("free click", function(text) -- u can add any text to "text"
 	game:GetService("ReplicatedStorage").Events.FreeGifts.Gift2:FireServer(text,"Clicks",false,false,"Normal")
 end)
 ```
+Credit to Singularity#5490 for creating the lib
+Soon adding more features to readme by myself.
