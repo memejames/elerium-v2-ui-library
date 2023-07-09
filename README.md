@@ -1,7 +1,7 @@
 # Imgui Example
 ```lua
 
-local library = loadstring(game:HttpGet(("https://raw.githubusercontent.com/memejames/Imgui/main/Library"),true))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/Imgui/main/Library"))()
 ```
 
 Create Window Here:
