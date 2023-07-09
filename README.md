@@ -21,8 +21,8 @@ end)
 ```
 create toggle
 ```lua
-local switch = t:AddSwitch("God Mode", function(bool)
-	toggle_god_mode(bool)
+local switch = features:AddSwitch("name", function(bool)
+	 -- toggle_god_mode(bool)
 end)
 switch:Set(true)
 ```
