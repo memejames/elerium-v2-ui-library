@@ -1,6 +1,7 @@
 # Imgui Example
-#Note
+```
 Please Copy and paste Library code into ur executor or text editor, Do not use Library code as loadstring as it may not work.
+```
 
 Create Window Here:
 ```lua
@@ -30,7 +31,7 @@ switch:Set(true)
 ```
 AddTextBox:
 ```lua
-features:AddTextBox("free click", function(text)
-	game:GetService("ReplicatedStorage").Events.FreeGifts.Gift2:FireServer(text,"Click",false,false,"Normal")
+features:AddTextBox("free click", function(text) -- u can add any text to "text"
+	game:GetService("ReplicatedStorage").Events.FreeGifts.Gift2:FireServer(text,"Clicks",false,false,"Normal")
 end)
 ```
