@@ -67,7 +67,7 @@ local not_a_planet = dropdown:Add("Iridocyclitis")
 ```
 AddConsole example:
 ```lua
--- Add console for ur Script/Gui
+-- Add console for ur Script/Gui, Idk if works
 features:AddConsole({ 
 	["y"] = 210,
 	["readonly"] = false,  
