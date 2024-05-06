@@ -1,4 +1,4 @@
-# Elerium v2 Example, Supports PC and Mobile! yes
+# Elerium v2 Example, Supports PC and Mobile!
 
 Please Copy and paste Library code into ur executor or text editor, Do not use Library code as loadstring as it may not work.
 
