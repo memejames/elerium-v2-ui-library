@@ -1,6 +1,9 @@
 # Elerium v2 Example, Supports PC and Mobile!
 
-Please Copy and paste Library code into ur executor or text editor, Do not use Library code as loadstring as it may not work.
+Loadstring
+```lua
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library", true))()
+```
 
 Create Window Here:
 ```lua
@@ -86,5 +89,4 @@ local folder2 = folder:AddFolder()
 folder2:AddLabel("I'm inside *two* folders :smirk:")
 ```
 
-Credit to Singularity#5490 for creating the lib
-Soon adding more features to readme by myself.
+Credit to Chinawasspyingonusa
