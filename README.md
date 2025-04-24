@@ -1,3 +1,4 @@
+# DISCONTINUED
 # Elerium v2 Example, Supports PC and Mobile!
 
 Loadstring
