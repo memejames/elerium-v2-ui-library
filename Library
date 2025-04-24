@@ -1,4 +1,3 @@
--- Made by Fear_God, Edited
 local ui_options = {
 	main_color = Color3.fromRGB(41, 74, 122),
 	min_size = Vector2.new(400, 300),
@@ -85,7 +84,7 @@ local Input_Roundify_4px = Instance.new("ImageLabel")
 local Windows = Instance.new("Frame")
 
 imgui.Name = "imgui"
-imgui.Parent = game:GetService("CoreGui")
+imgui.Parent = game:GetService("CoreGui") or gethui()
 
 Prefabs.Name = "Prefabs"
 Prefabs.Parent = imgui
