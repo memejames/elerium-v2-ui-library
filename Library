@@ -82,7 +82,9 @@ local title4Label = Instance.new("TextLabel")
 local inputButton = Instance.new("TextButton")
 local inputRoundify4px = Instance.new("ImageLabel")
 local windowsFrame = Instance.new("Frame")
-local CoreGui= game:GetService("CoreGui")
+local cloneref = cloneref and cloneref or function(...) return ... end
+local CoreGui= cloneref(game:GetService("CoreGui"))
+
 
 imgui.Name = "imgui"
 imgui.Parent = gethui and gethui() or (CoreGui or game.Players.LocalPlayer:WaitForChild("PlayerGui"))
