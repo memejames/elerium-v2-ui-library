@@ -82,10 +82,10 @@ local title4Label = Instance.new("TextLabel")
 local inputButton = Instance.new("TextButton")
 local inputRoundify4px = Instance.new("ImageLabel")
 local windowsFrame = Instance.new("Frame")
+local CoreGui= game:GetService("CoreGui")
 
 imgui.Name = "imgui"
-imgui.Parent = game:GetService("CoreGui")
-
+imgui.Parent = gethui and gethui() or (CoreGui or game.Players.LocalPlayer:WaitForChild("PlayerGui"))
 prefabs.Name = "Prefabs"
 prefabs.Parent = imgui
 prefabs.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -924,7 +924,7 @@ local function format_windows()
 	ull.Parent = windowsFrame
 	local data = {}
 
-	for i,v in next, windowsFrame:GetChildren() do
+	for i,v in pairs(windowsFrame:GetChildren()) do
 		if not (v:IsA("UIListLayout")) then
 			data[v] = v.AbsolutePosition
 		end
@@ -932,7 +932,7 @@ local function format_windows()
 
 	ull:Destroy()
 
-	for i,v in next, data do
+	for i,v in pairs(data) do
 		i.Position = UDim2.new(0, v.X, 0, v.Y)
 	end
 end
@@ -1053,7 +1053,7 @@ function library:AddWindow(title, options)
 					-- Close
 
 					oldwindowdata = {}
-					for i,v in next, Window:FindFirstChild("Tabs"):GetChildren() do
+					for i,v in pairs(Window:FindFirstChild("Tabs"):GetChildren()) do
 						oldwindowdata[v] = v.Visible
 						v.Visible = false
 					end
@@ -1068,7 +1068,7 @@ function library:AddWindow(title, options)
 				else
 					-- Open
 
-					for i,v in next, oldwindowdata do
+					for i,v in pairs(oldwindowdata) do
 						i.Visible = v
 					end
 
@@ -1112,13 +1112,13 @@ function library:AddWindow(title, options)
 
 				local function show()
 					if dropdown_open then return end
-					for i, v in next, tab_buttons:GetChildren() do
+					for i, v in pairs(tab_buttons:GetChildren()) do
 						if not (v:IsA("UIListLayout")) then
 							v:GetChildren()[1].ImageColor3 = Color3.fromRGB(52, 53, 56)
 							Resize(v, {Size = UDim2.new(0, v.AbsoluteSize.X, 0, 20)}, options.tween_time)
 						end
 					end
-					for i, v in next, tabs:GetChildren() do
+					for i, v in pairs(tabs:GetChildren()) do
 						v.Visible = false
 					end
 
@@ -1645,7 +1645,7 @@ local object = prefabs:FindFirstChild("DropdownButton"):Clone()
 						Source.TextEditable = not console_options.readonly
 
 						do
-							for i,v in next, Source:GetChildren() do
+							for i,v in pairs(Source:GetChildren()) do
 								v.ZIndex = v.ZIndex + (windows * 10) + 1
 							end
 						end
@@ -1980,7 +1980,7 @@ local object = prefabs:FindFirstChild("DropdownButton"):Clone()
 
 						local function gFolderLen()
 							local n = 25
-							for i,v in next, objects:GetChildren() do
+							for i,v in pairs(objects:GetChildren()) do
 								if not (v:IsA("UIListLayout")) then
 									n = n + v.AbsoluteSize.Y + 5
 								end
@@ -2008,7 +2008,7 @@ local object = prefabs:FindFirstChild("DropdownButton"):Clone()
 							end
 						end)
 
-						for i,v in next, tab_data do
+						for i,v in pairs(tab_data) do
 							folder_data[i] = function(...)
 								local data, object
 								local ret = {v(...)}
@@ -2036,7 +2036,7 @@ local object = prefabs:FindFirstChild("DropdownButton"):Clone()
 	end
 
 	do
-		for i, v in next, Window:GetDescendants() do
+		for i, v in pairs(Window:GetDescendants()) do
 			if hasprop(v, "ZIndex") then
 				v.ZIndex = v.ZIndex + (windows * 10)
 			end
